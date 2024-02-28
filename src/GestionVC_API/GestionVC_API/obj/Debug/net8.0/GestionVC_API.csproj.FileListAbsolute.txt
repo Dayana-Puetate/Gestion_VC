@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.AssemblyInfo.cs
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\source\repos\Gestion_VC\src\GestionVC_API\GestionVC_API\obj\Debug\net8.0\GestionVC_API.MvcApplicationPartsAssemblyInfo.cache
