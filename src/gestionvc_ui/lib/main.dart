@@ -4,7 +4,7 @@ import 'package:gestionvc_ui/vendedores_page.dart';
 import 'home_page.dart';
 import 'ventas_page.dart';
 import 'productos_page.dart';
-import 'zonas_page.dart'; // Importa la página de ventas que creaste
+import 'zonas_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/', // Ruta inicial (puedes cambiarla según necesites)
+      initialRoute: '/', // Ruta inicial
       routes: {
         '/': (context) => HomePage(), // Ruta para la página de inicio
         '/ventas': (context) => VentasPage(), // Ruta para la página de ventas
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/productos': (context) => ProductosPage(),
         '/zonas': (context) => ZonasPage(),
         '/vendedores': (context) => VendedoresPage(),
-        // Puedes agregar más rutas según lo necesites
+        //Falta Ruta de Detalle_Ventas y falta consumir las API para 
+// las consultas 
       },
     );
   }
