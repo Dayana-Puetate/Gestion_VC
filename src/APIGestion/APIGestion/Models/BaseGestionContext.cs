@@ -197,4 +197,35 @@ public partial class BaseGestionContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public IQueryable<IGrouping<int, Venta>> ZonasMasVentasVendedor()
+    {
+        // Agrupar las ventas por zona y vendedor y contar la cantidad de ventas
+        var cantVentas = from venta in Set<Venta>()
+                         group venta by new { venta.IdZona, venta.IdVendedor } into grp
+                         select new { IdZona = grp.Key.IdZona, IdVendedor = grp.Key.IdVendedor, CantidadVentas = grp.Count() };
+
+        // Convertir la consulta a IQueryable<IGrouping<int, Venta>>
+        var ventasAgrupadas = cantVentas.GroupBy(x => x.IdZona, x => new Venta { IdZona = x.IdZona, IdVendedor = x.IdVendedor });
+
+        return (IQueryable<IGrouping<int, Venta>>)ventasAgrupadas.AsQueryable();
+    }
+
+    public List<Zona> ZonasSinVentasEnIntervaloDeFechas(DateTime fechaInicio, DateTime fechaFin)
+    {
+        var zonasSinVentas = from zona in Set<Zona>()
+                             where !zona.Venta.Any(venta => venta.Fecha >= fechaInicio && venta.Fecha <= fechaFin)
+                             select zona;
+
+        return zonasSinVentas.ToList();
+    }
+
+    public List<Vendedor> VendedoresSinVentasEnIntervaloDeFechas(DateTime fechaInicio, DateTime fechaFin)
+    {
+        var vendedoresSinVentas = from vendedor in Set<Vendedor>()
+                                  where !vendedor.Venta.Any(venta => venta.Fecha >= fechaInicio && venta.Fecha <= fechaFin)
+                                  select vendedor;
+
+        return vendedoresSinVentas.ToList();
+    }
 }
