@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\models\\basegestioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\models\\basegestioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\models\\entidades\\ventasporcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\models\\entidades\\ventasporcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\controllers\\vendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\controllers\\vendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\models\\datos\\basegestioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\models\\datos\\basegestioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\controllers\\ventasclientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\controllers\\ventasclientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|c:\\users\\dell\\source\\repos\\gestion_vc\\src\\apigestion\\apigestion\\models\\entidades\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF75B84-E072-4CC5-A208-F15BD01118F7}|APIGestion\\APIGestion.csproj|solutionrelative:apigestion\\models\\entidades\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentasClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Controllers\\VentasClienteController.cs",
+              "RelativeDocumentMoniker": "APIGestion\\Controllers\\VentasClienteController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Controllers\\VentasClienteController.cs",
+              "RelativeToolTip": "APIGestion\\Controllers\\VentasClienteController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T03:55:59.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VendedorController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Controllers\\VendedorController.cs",
+              "RelativeDocumentMoniker": "APIGestion\\Controllers\\VendedorController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Controllers\\VendedorController.cs",
+              "RelativeToolTip": "APIGestion\\Controllers\\VendedorController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAEgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T03:46:13.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Entidades\\Venta.cs",
+              "RelativeDocumentMoniker": "APIGestion\\Models\\Entidades\\Venta.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Entidades\\Venta.cs",
+              "RelativeToolTip": "APIGestion\\Models\\Entidades\\Venta.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T03:37:52.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VentasPorCliente.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Entidades\\VentasPorCliente.cs",
+              "RelativeDocumentMoniker": "APIGestion\\Models\\Entidades\\VentasPorCliente.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Entidades\\VentasPorCliente.cs",
+              "RelativeToolTip": "APIGestion\\Models\\Entidades\\VentasPorCliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T03:37:45.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BaseGestionContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\BaseGestionContext.cs",
-              "RelativeDocumentMoniker": "APIGestion\\Models\\BaseGestionContext.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\BaseGestionContext.cs",
-              "RelativeToolTip": "APIGestion\\Models\\BaseGestionContext.cs",
-              "ViewState": "AQIAANUAAAAAAAAAAAAAAOUAAAAFAAAA",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Datos\\BaseGestionContext.cs",
+              "RelativeDocumentMoniker": "APIGestion\\Models\\Datos\\BaseGestionContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Gestion_VC\\src\\APIGestion\\APIGestion\\Models\\Datos\\BaseGestionContext.cs",
+              "RelativeToolTip": "APIGestion\\Models\\Datos\\BaseGestionContext.cs",
+              "ViewState": "AQIAAMYAAAAAAAAAAAAAAMkAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T03:21:51.241Z",
               "EditorCaption": ""

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using APIGestion.Models;
 using System.Text.Json.Serialization;
+using APIGestion.Models.Datos;
 
 var builder = WebApplication.CreateBuilder(args);
 

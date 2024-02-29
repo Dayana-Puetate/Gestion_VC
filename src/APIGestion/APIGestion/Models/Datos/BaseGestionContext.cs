@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using APIGestion.Models.Entidades;
 using Microsoft.EntityFrameworkCore;
 
-namespace APIGestion.Models;
+namespace APIGestion.Models.Datos;
 
 public partial class BaseGestionContext : DbContext
 {
@@ -203,13 +204,14 @@ public partial class BaseGestionContext : DbContext
         // Agrupar las ventas por zona y vendedor y contar la cantidad de ventas
         var cantVentas = from venta in Set<Venta>()
                          group venta by new { venta.IdZona, venta.IdVendedor } into grp
-                         select new { IdZona = grp.Key.IdZona, IdVendedor = grp.Key.IdVendedor, CantidadVentas = grp.Count() };
+                         select new { IdZona = grp.Key.IdZona ?? 0, IdVendedor = grp.Key.IdVendedor ?? 0, CantidadVentas = grp.Count() };
 
         // Convertir la consulta a IQueryable<IGrouping<int, Venta>>
         var ventasAgrupadas = cantVentas.GroupBy(x => x.IdZona, x => new Venta { IdZona = x.IdZona, IdVendedor = x.IdVendedor });
 
         return (IQueryable<IGrouping<int, Venta>>)ventasAgrupadas.AsQueryable();
     }
+
 
     public List<Zona> ZonasSinVentasEnIntervaloDeFechas(DateTime fechaInicio, DateTime fechaFin)
     {
@@ -227,5 +229,24 @@ public partial class BaseGestionContext : DbContext
                                   select vendedor;
 
         return vendedoresSinVentas.ToList();
+    }
+
+    public List<VentasPorCliente> ObtenerVentasPorCliente()
+    {
+        var ventasPorCliente = from venta in Set<Venta>()
+                               where venta.Fecha.Year >= 2020 && venta.Fecha.Year <= 2023
+                               group venta by new { venta.IdCliente, venta.objetoCliente.Nombre, venta.obZona.NombreZona } into grp
+                               select new VentasPorCliente
+                               {
+                                   Id_Cliente = (int)grp.Key.IdCliente,
+                                   NombreCliente = grp.Key.Nombre,
+                                   Zona = grp.Key.NombreZona,
+                                   Ventas2020 = grp.Where(v => v.Fecha.Year == 2020).Sum(v => v.MontoTotal),
+                                   Ventas2021 = grp.Where(v => v.Fecha.Year == 2021).Sum(v => v.MontoTotal),
+                                   Ventas2022 = grp.Where(v => v.Fecha.Year == 2022).Sum(v => v.MontoTotal),
+                                   Ventas2023 = grp.Where(v => v.Fecha.Year == 2023).Sum(v => v.MontoTotal)
+                               };
+
+        return ventasPorCliente.ToList();
     }
 }

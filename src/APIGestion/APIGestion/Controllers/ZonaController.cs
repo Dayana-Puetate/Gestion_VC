@@ -1,4 +1,5 @@
-﻿using APIGestion.Models;
+﻿using APIGestion.Models.Datos;
+using APIGestion.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -63,6 +64,14 @@ namespace APIGestion.Controllers
             bd.Zonas.Remove(zona!);
             await bd.SaveChangesAsync();
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("ZonasSinVentasEnIntervaloDeFechas")]
+        public IActionResult ZonasSinVentasEnIntervaloDeFechas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            var result = bd.ZonasSinVentasEnIntervaloDeFechas(fechaInicio, fechaFin);
+            return Ok(result);
         }
     }
 }

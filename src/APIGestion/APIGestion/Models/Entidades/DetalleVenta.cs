@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace APIGestion.Models;
+namespace APIGestion.Models.Entidades;
 
 public partial class DetalleVenta
 {

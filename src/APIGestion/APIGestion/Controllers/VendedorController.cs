@@ -1,7 +1,9 @@
-﻿using APIGestion.Models;
+﻿using APIGestion.Models.Datos;
+using APIGestion.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace APIGestion.Controllers
 {
@@ -65,6 +67,22 @@ namespace APIGestion.Controllers
             bd.Vendedores.Remove(vendedor!);
             await bd.SaveChangesAsync();
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("ZonasMasVentasVendedor")]
+        public IActionResult ZonasMasVentasVendedor()
+        {
+            var result = bd.ZonasMasVentasVendedor().ToList();
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("VendedoresSinVentasEnIntervaloDeFechas")]
+        public IActionResult VendedoresSinVentasEnIntervaloDeFechas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            var result = bd.VendedoresSinVentasEnIntervaloDeFechas(fechaInicio, fechaFin);
+            return Ok(result);
         }
     }
 }
