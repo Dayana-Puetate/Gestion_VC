@@ -1,5 +1,6 @@
 ﻿using APIGestion.Models.Datos;
 using APIGestion.Models.Entidades;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIGestion.Controllers
 {
+    [EnableCors("ReglasCors")]
     [Route("api/[controller]")]
     [ApiController]
     public class VendedorController : ControllerBase
