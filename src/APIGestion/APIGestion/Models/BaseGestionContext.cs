@@ -21,15 +21,15 @@ public partial class BaseGestionContext : DbContext
 
     public virtual DbSet<Producto> Productos { get; set; }
 
-    public virtual DbSet<Vendedore> Vendedores { get; set; }
+    public virtual DbSet<Vendedor> Vendedores { get; set; }
 
     public virtual DbSet<Venta> Ventas { get; set; }
 
     public virtual DbSet<Zona> Zonas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DAYIS; DataBase=BASE_GESTION;Integrated Security=true;TrustServerCertificate=True");
+    {
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -79,11 +79,11 @@ public partial class BaseGestionContext : DbContext
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("subtotal");
 
-            entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.DetalleVenta)
+            entity.HasOne(d => d.objetoProducto).WithMany(p => p.DetalleVenta)
                 .HasForeignKey(d => d.IdProducto)
                 .HasConstraintName("FK__DETALLE_V__id_pr__4222D4EF");
 
-            entity.HasOne(d => d.IdVentaNavigation).WithMany(p => p.DetalleVenta)
+            entity.HasOne(d => d.objetoIdVenta).WithMany(p => p.DetalleVenta)
                 .HasForeignKey(d => d.IdVenta)
                 .HasConstraintName("FK__DETALLE_V__id_ve__412EB0B6");
         });
@@ -115,7 +115,7 @@ public partial class BaseGestionContext : DbContext
             entity.Property(e => e.Stock).HasColumnName("stock");
         });
 
-        modelBuilder.Entity<Vendedore>(entity =>
+        modelBuilder.Entity<Vendedor>(entity =>
         {
             entity.HasKey(e => e.IdVendedor).HasName("PK__VENDEDOR__00930308834FFB03");
 
@@ -156,22 +156,22 @@ public partial class BaseGestionContext : DbContext
                 .HasColumnName("fecha");
             entity.Property(e => e.IdCliente).HasColumnName("id_cliente");
             entity.Property(e => e.IdVendedor).HasColumnName("id_vendedor");
-            entity.Property(e => e.IzZona).HasColumnName("iz_zona");
+            entity.Property(e => e.IdZona).HasColumnName("id_zona");
             entity.Property(e => e.MontoTotal)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("monto_total");
 
-            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Venta)
+            entity.HasOne(d => d.objetoCliente).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.IdCliente)
                 .HasConstraintName("FK__VENTAS__id_clien__3C69FB99");
 
-            entity.HasOne(d => d.IdVendedorNavigation).WithMany(p => p.Venta)
+            entity.HasOne(d => d.objetoVendedor).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.IdVendedor)
                 .HasConstraintName("FK__VENTAS__id_vende__3D5E1FD2");
 
-            entity.HasOne(d => d.IzZonaNavigation).WithMany(p => p.Venta)
-                .HasForeignKey(d => d.IzZona)
-                .HasConstraintName("FK__VENTAS__iz_zona__3E52440B");
+            entity.HasOne(d => d.obZona).WithMany(p => p.Venta)
+                .HasForeignKey(d => d.IdZona)
+                .HasConstraintName("FK__VENTAS__id_zona__3E52440B");
         });
 
         modelBuilder.Entity<Zona>(entity =>

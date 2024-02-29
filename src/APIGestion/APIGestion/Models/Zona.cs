@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIGestion.Models;
 
@@ -11,5 +12,6 @@ public partial class Zona
 
     public string? Descripcion { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
 }

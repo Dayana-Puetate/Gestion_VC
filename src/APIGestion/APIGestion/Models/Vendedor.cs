@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIGestion.Models;
 
-public partial class Vendedore
+public partial class Vendedor
 {
     public int IdVendedor { get; set; }
 
@@ -15,5 +16,7 @@ public partial class Vendedore
 
     public string Direccion { get; set; } = null!;
 
+
+    [JsonIgnore]
     public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
 }

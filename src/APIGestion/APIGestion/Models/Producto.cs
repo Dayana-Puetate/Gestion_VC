@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIGestion.Models;
 
@@ -17,5 +18,6 @@ public partial class Producto
 
     public string? Categoria { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<DetalleVenta> DetalleVenta { get; set; } = new List<DetalleVenta>();
 }
